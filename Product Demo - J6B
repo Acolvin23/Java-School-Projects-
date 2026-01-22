@@ -1,0 +1,55 @@
+// Product Demo - J6B
+// Alex Colvin - S25
+
+
+ public class ColvinA_J6B
+ {
+ 
+   public static void main (String [] args)
+   {
+   
+ // Creating Initial Array Object //
+ 
+     Product [] product = new Product [10];
+    
+ // Creating The Original Eight Products //
+ 
+     product[0] = new Product("A193", " 2-Slice Toaster ", 7, 22.96);
+     product[1] = new Product("A195", " 4-Slice Toaster ", 11, 22.96);
+     product[2] = new Product("S013", " Baseball Bat ",  14, 24.98);
+     product[3] = new Product("S049", " Baseballs ", 56, 4.47);
+     product[4] = new Product("S112", " Baseball Glove ", 9, 29.77);
+     product[5] = new Product("H023", " Bath Towel ", 17, 2.94);
+     product[6] = new Product("H026", " Bath Cloth ", 24, 1.97);
+     product[7] = new Product("H033", " Bath Soap ", 21, 1.50);
+    
+ // Adding additional Two Products To List //
+ 
+     product[8] = new Product("B035", " Coffee Table ", 10, 39.54);
+     product[9] = new Product("B023", " Love Chair ", 5, 42.63);
+    
+     double totalProductValue = 0.0;
+    
+ // Print Output //
+ 
+     System.out.printf("%-10s %-18s %8s %9s %12s%n","Product #", "Description", "Price", "Quantity", "Prod Val");
+    
+ // Loop Through Array //
+  
+    for (int index = 0; index < product.length; index++)
+    {
+     Product p = product [index];
+     double productValue = p.getProdStockValue ();
+     totalProductValue += productValue;
+    
+     System.out.printf("%-10s %-18s $%7.2f %9d $%11.2f%n", p.getProdNum(), p.getProdDesc(), p.getProdPrice(), p.getProdCnt(), productValue);
+    }
+   
+// Print The Product Value //
+
+     System.out.printf("%42s $%,11.2f%n", "Total", totalProductValue);
+  
+// End Of Program // 
+ 
+  }
+ }
