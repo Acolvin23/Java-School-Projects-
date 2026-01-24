@@ -1,0 +1,68 @@
+// Visit Demo - J5B
+// Alex Colvin, S25
+
+ // Main Method //
+ 
+  public class ColvinA_J5B
+  {
+   public static void main(String[] args)
+   {
+ // No-Args Constructor for Visit 1 //
+
+      Visit visit1 = new Visit();
+      visit1.setName("Miles Lewis");
+      visit1.setDiagCode("J20.9");
+      visit1.setBloodDraw(true);
+      visit1.setShot(true);
+      visit1.setVisitType('2');
+           
+  // Println Statement for Visit 1 //
+   
+        System.out.println("          Name: " + visit1.getName());
+        System.out.println("Diagnosis Code: " + visit1.getDiagCode() + " - " + visit1.getDiagDescr());
+        System.out.println("    Blood Draw: " + (visit1.getBloodDraw() ? "Yes" : "No"));
+        System.out.println("          Shot: " + visit1.getVisitDescr());
+        System.out.printf("       Charges: $%.2f%n%n", visit1.getCharges());
+   
+ // No-Args Constructor for Visit 2 //
+ 
+      Visit visit2 = new Visit();
+      visit2.setName("Daniel Lewis");
+      visit2.setDiagCode("J03.90");
+      visit2.setBloodDraw(false);
+      visit2.setShot(false);
+      visit2.setVisitType("brief");
+      
+ // Println Statement for Visit 2 //
+      
+        System.out.println("          Name: " + visit2.getName());
+        System.out.println("Diagnosis Code: " + visit2.getDiagCode() + " - " + visit2.getDiagDescr());
+        System.out.println("    Blood Draw: " + (visit2.getBloodDraw() ? "Yes" : "No"));
+        System.out.println("          Shot: " + visit2.getVisitDescr());
+        System.out.printf("       Charges: $%.2f%n%n", visit2.getCharges());
+   
+      Visit visit3 = new Visit("Haylee Black", "F90.1", false, false, '3');
+      
+  // Println Statement for Value 3 //    
+      
+        System.out.println("          Name: " + visit3.getName());
+        System.out.println("Diagnosis Code: " + visit3.getDiagCode() + " - " + visit3.getDiagDescr());
+        System.out.println("    Blood Draw: " + (visit3.getBloodDraw() ? "Yes" : "No"));
+        System.out.println("          Shot: " + visit3.getVisitDescr());
+        System.out.printf("       Charges: $%.2f%n%n", visit3.getCharges());
+      
+      Visit visit4 = new Visit("Sheyla Dixson", "J01.90", false, true, '3');
+      
+  // Println Statement for Value 4 //
+   
+        System.out.println("          Name: " + visit4.getName());
+        System.out.println("Diagnosis Code: " + visit4.getDiagCode() + " - " + visit4.getDiagDescr());
+        System.out.println("    Blood Draw: " + (visit4.getBloodDraw() ? "Yes" : "No"));
+        System.out.println("          Shot: " + visit4.getVisitDescr());
+        System.out.printf("       Charges: $%.2f%n%n", visit4.getCharges());
+    
+  // End of Program //
+    
+  }
+ }
+   
