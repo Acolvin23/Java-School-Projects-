@@ -1,0 +1,90 @@
+// Patient - J5A
+// Alex Colvin, S25
+
+
+public class Patient
+{  
+ // Defining The Fields //
+
+     private String firstName;
+     private String lastName;
+     private String address;
+     private String csz;  
+     private String phone;
+
+// No Args Constructor //
+
+   public Patient()
+   {
+  
+   }
+  
+// Full-Init Constructor // 
+
+   public Patient(String fn, String ln, String addr, String cityStateZip, String ph)
+   {
+       firstName = fn;
+       lastName = ln;
+       address = addr;
+       csz = cityStateZip;
+       phone = ph; 
+   }
+
+// Getter Methods //
+
+   public String getFirstName()
+   {
+      return firstName;
+   }
+   public String getLastName()
+   {
+      return lastName;
+   }
+   public String getAddress()
+   {
+      return address;
+   }
+   public String getCsz()
+   {
+      return csz;
+   }
+   public String getPhone()
+   {
+      return phone;
+   }
+ 
+ // Setter Method //
+  
+  public void setFirstName(String fn)
+   {
+      firstName = fn;
+   }
+   public void setLastName(String ln)
+   {
+      lastName = ln;
+   }
+   public void setAddress(String addr)
+   {
+      address = addr;
+   }
+   public void setCsz(String cityStateZip)
+   {
+      csz = cityStateZip;
+   }
+   public void setPhone(String ph)
+   {
+      phone = ph;
+   }
+ 
+ 
+ // Returning First & Last Name //
+ 
+  public String getfullName()
+  {  
+     return firstName + " " + lastName;
+  }    
+     
+ // End of Program //
+
+  }
+ 
