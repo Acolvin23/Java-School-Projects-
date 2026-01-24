@@ -1,0 +1,135 @@
+// Product Class Program - J6B
+// Alex Colvin - S25
+
+
+public class Product
+{
+    private String prodNum, prodDesc ;
+    private int prodCnt ;
+    private double prodPrice ;
+    
+// Product Constructor - no-args
+  public Product ()
+{
+
+   prodCnt = 0;
+   prodPrice = 0.0;
+}
+
+/*
+Product Constructor - full with appropriate types
+@param str num - product number
+@param str descr - product description
+@param int cnt - product inventory count
+@param double price - product unit price
+*/
+  public Product (String num, String descr, int cnt, double price)
+{
+    prodNum = num ;
+    prodDesc = descr ;
+    prodCnt = cnt;
+    prodPrice = price;
+}
+/**
+Product Constructor - full with String data types
+@param str num - product number
+@param str descr - product description
+@param str cnt - product inventory count
+@param str price - product unit price
+*/
+ public Product (String num, String descr, String cnt, String price)
+{
+   prodNum = num ;
+   prodDesc = descr ;
+   prodCnt = Integer.parseInt(cnt);
+   prodPrice = Double.parseDouble(price);
+}
+/**
+Set the product number
+@param str num - product number
+*/
+ public void setProdNum(String num)
+{
+   prodNum = num ;
+}
+/**
+Set the product description
+@param str descr - product description
+*/
+ public void setProdDesc(String descr)
+{
+   prodDesc = descr ;
+}
+/**
+Set the product inventory count
+@param int cnt - product inventory count
+*/
+ public void setProdCnt(int cnt)
+{
+   prodCnt = cnt ;
+}
+/**
+Set the product inventory count
+@param str cnt - product inventory count
+*/
+ public void setProdCnt(String cnt)
+{
+   prodCnt = Integer.parseInt(cnt) ;
+}
+/**
+Set the product price
+@param double price - product unit price
+*/
+ public void setProdPrice(double price)
+{
+   prodPrice = price ;
+}
+/**
+Set the product price
+@param str price - product unit price
+*/
+ public void setProdPrice(String price)
+{
+   prodPrice = Double.parseDouble(price) ;
+}
+/**
+Get the product number
+@return str product number
+*/
+ public String getProdNum()
+{
+   return prodNum ;
+}
+/**
+Get the product description
+@return str product description
+*/
+ public String getProdDesc()
+{
+  return prodDesc ;
+}
+/**
+Get the product count
+@return int product inventory count
+*/
+ public int getProdCnt()
+{
+  return prodCnt ;
+}
+/**
+Get the product price
+@return double product unit price
+*/
+ public double getProdPrice()
+{
+  return prodPrice ;
+}
+/**
+Get the product stock value (price * cnt)
+@return double product stock value
+*/
+ public double getProdStockValue()
+{
+  return prodCnt * prodPrice ;
+}
+}
