@@ -1,0 +1,88 @@
+// Insurance Options App - J4A
+// Alex Colvin S25
+
+// Import scanner class
+
+import java.util.Scanner; 
+
+public class Colvin_J4A
+{
+  public static void main(String [] args)
+  {
+  
+// Initilization of variables
+   
+      printHeading();
+     
+      char option = getOption();
+   
+      String optionDescription = getOptionDescription(option);
+   
+      printInsInfo(option, optionDescription);
+  }
+ 
+// Get Option Method 
+   
+ public static char getOption()
+  {
+     Scanner keyboard = new Scanner(System.in);
+
+     System.out.println("Select your insurance option: ");
+     System.out.println("A-Health Insurance ");
+     System.out.println("B-Dental Insurance ");
+     System.out.println("C-Vision Insurance ");
+     System.out.println("D-Life Insurance ");
+  
+   char option = keyboard.next().toUpperCase().charAt(0); 
+  
+  return option;
+  }
+ 
+ // Get Option Description Method
+ 
+  public static String getOptionDescription(char option)
+  {
+    String insuranceDescription = " ";
+     
+   switch (option)
+   {
+     case 'A':
+       insuranceDescription = "Health Insurance";
+       break;
+      
+     case 'B':
+       insuranceDescription = "Dental Insurance";
+       break;
+       
+     case 'C':
+       insuranceDescription = "Vision Insurance";
+       break;
+     
+      case 'D':
+       insuranceDescription = "Life Insurance";
+       break;
+      
+      default:
+       insuranceDescription = "You Entered An Invalid Option";
+   }
+   return insuranceDescription;
+   }
+  
+ // Print Heading Method
+ 
+  public static void printHeading()
+  {
+     System.out.println("\nSelected Insurance Option\n");
+    
+ // Print Insurance Info Method
+    
+  }
+  public static void printInsInfo(char option, String insuranceDescription)
+  {
+     System.out.println("\n Selected Insurance Option");
+     System.out.println("\nOption Selected: " + insuranceDescription + " (" + option + ")");
+    
+ // End of Program     
+}
+ }
+  
