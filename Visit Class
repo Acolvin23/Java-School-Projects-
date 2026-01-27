@@ -1,0 +1,152 @@
+// Visit - J5B 
+// Alex Colvin, S25
+
+
+public class Visit
+{
+// Defining The Fields //
+
+     private String name;
+     private String diagCode;
+     private boolean bloodDraw;
+     private boolean shot;
+     private char visitType;
+    
+ // No Args Constructor //
+ 
+  public Visit()
+  {
+ 
+  }
+ 
+ // Full-Init Constructor //
+ 
+  public Visit(String nam, String dc, boolean draw, boolean sht, char visit)
+  {
+       name = nam;
+       diagCode = dc;
+       bloodDraw = draw;
+       shot = sht;
+       visitType = visit;
+  }  
+    
+ // Setter Methods //
+    
+   public void setName(String first)
+   {
+       name = first;
+   }
+   public void setDiagCode(String diag)
+   {
+      diagCode = diag;
+   }
+   public void setBloodDraw(boolean draw)
+   {
+      bloodDraw = draw;
+   }
+   public void setShot(boolean sht)
+   {
+      shot = sht;
+   }
+   public void setVisitType(char visit)
+   {
+      visitType = visit;
+   } 
+   
+   
+   public void setVisitType(String visit)
+   {
+   if (visit.equalsIgnoreCase("brief")) 
+   {
+      visitType = '1';
+   }
+   else if (visit.equalsIgnoreCase("intermadiate"))
+   {
+      visitType = '2';
+   }
+   else if (visit.equalsIgnoreCase("thorough"))
+   {
+      visitType = '3';
+   }
+   else
+   {
+      visitType = '0';
+   } 
+   
+   }
+  
+ // Getter Methods //
+ 
+   public String getName()
+   {
+      return name;
+   }
+   public String getDiagCode()
+   {
+      return diagCode;
+   }
+   public boolean getBloodDraw()
+   {
+      return bloodDraw;
+   }
+   public boolean getShot()
+   {
+      return shot;
+   }
+   public double getCharges()
+   {
+      double charge = 0.00;
+   
+   if (visitType == '1')
+   {
+      charge = 35.00;
+   }
+   else if (visitType == '2')
+   {
+      charge = 55.00;
+   }
+   else if (visitType == '3')
+   {
+      charge = 75.00;
+   }  
+   
+   if (bloodDraw)
+   {
+      charge += 21.00;
+   }
+   if (shot)
+   {
+      charge +=15.00;
+   }
+   
+    return charge;
+  }
+   
+  public String getDiagDescr()
+  {
+    switch (diagCode)
+  {
+       case "J20.9": return "Bronchitis";
+       case "J45.909": return "Asthma";
+       case "F90.1": return "ADHD";
+       case "G43.909": return "Migraine";
+       case "J03.90": return "Tonsillitis";
+       case "J01.90": return "Sinusitis";
+       default: return "Invalid Diagnosis Code";
+  }  
+ }
+ 
+  public String getVisitDescr()
+  {
+    switch (visitType)
+  {
+      case '1': return "brief";
+      case '2': return "Intermediate";
+      case '3': return "Thorough";
+      default: return "Invalid Visit Type";
+    }
+  }
+}  
+    
+      
+   
